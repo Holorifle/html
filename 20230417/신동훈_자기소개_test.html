@@ -15,41 +15,69 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .card-title {
+  color: black;
+}
+    .card-text {
+  color: black;
+}
+</style>
+<script>
+    // navbar 링크 클릭 시 해당 section으로 스크롤링
+    $('.nav-link').click(function(){
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 500);
+      return false;
+    });
+  </script>
 <body class="bg-dark">
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="#">Jane Doe</a>
+      <a class="navbar-brand" href="#">신동훈</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about-me">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact-me">Contact Me</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- 각 섹션의 ID를 지정해줍니다. -->
+<section id="home">
+</section>
+
+
+
+
+
+
+
+
 
   <!-- Header -->
   <header>
     <div class="container text-center text-white">
-      <img src="img/profile.jpg" alt="Profile Picture" class="rounded-circle img-thumbnail mb-4">
-      <h1>Jane Doe</h1>
+      <img src="https://holorifle.github.io/html/image/yesman.jpg" alt="Profile Picture" class="rounded-circle img-thumbnail mb-4">
+      <h1>신동훈</h1>
       <h4>Web Developer</h4>
     </div>
   </header>
@@ -57,8 +85,12 @@
   <!-- Main Content -->
   <section>
     <div class="container text-white">
+        <section id="about-me">
+        </section>
       <h2>About Me</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quaerat doloribus laborum optio consequatur veniam magni? Necessitatibus architecto, quas ratione ullam nulla, voluptatem molestiae sint ad quae perferendis consequuntur excepturi et, error sunt odit molestias incidunt ducimus magni sapiente optio eos. Quis, ex rerum aperiam odit excepturi assumenda quisquam perferendis.</p>
+      <section id="skills">
+    </section>
       <h2>Skills</h2>
       <div class="row">
         <div class="col-md-4">
@@ -87,26 +119,30 @@
         </div>
       </div>
     
+      <section id="portfolio">
+    </section>
       <h2>Portfolio</h2>
       <div class="card-columns">
         <div class="card">
-          <img class="card-img-top" src="img/portfolio1.jpg" alt="Portfolio Item">
+          <img class="card-img-top" src="https://holorifle.github.io/html/image/yesman.jpg" alt="Portfolio Item">
           <div class="card-body">
             <h4 class="card-title">Portfolio Item 1</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare neque eget turpis pretium, at consectetur nunc rhoncus.</p>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="img/portfolio2.jpg" alt="Portfolio Item">
+          <img class="card-img-top" src="https://holorifle.github.io/html/image/yesman.jpg" alt="Portfolio Item">
           <div class="card-body">
             <h4 class="card-title">Portfolio Item 2</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare neque eget turpis pretium, at consectetur nunc rhoncus.</p>
           </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="img/portfolio2.jpg" alt="Portfolio Item">
+            <img class="card-img-top" src="https://holorifle.github.io/html/image/yesman.jpg" alt="Portfolio Item">
         </section>
         <!-- Footer -->
+        <section id="contact-me">
+        </section>
         <footer class="page-footer font-small blue pt-4">
           <div class="container">
             <div class="row">
