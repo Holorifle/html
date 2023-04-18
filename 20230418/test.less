@@ -1,0 +1,24 @@
+@num-colors: 7; // 색상 개수
+@color-1: #f00; // 빨간색
+@spacing: 10px;
+
+// loop를 사용하여 각 색상을 정의합니다.
+.generate-colors(@index) when (@index > 0) {
+  // 현재 인덱스를 기준으로 색상을 계산합니다.
+  @color: spin(@color-1, (@index - 1) * 360 / @num-colors);
+
+  // 요소를 스타일링합니다.
+  div:nth-of-type(@{index}) {
+    width: 50px;
+    height: 50px;
+    margin: @spacing;
+    background-color: @color;
+  }
+
+  // 다음 인덱스로 넘어갑니다.
+  .generate-colors(@index - 1);
+}
+
+// loop를 종료합니다.
+.generate-colors(7);
+
